@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Image Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+  </div>
+
+  <div class="gallery">
+    <img src="https://source.unsplash.com/random/400x300?nature" data-category="nature" alt="Nature" onclick="openLightbox(0)">
+    <img src="https://source.unsplash.com/random/401x300?city" data-category="city" alt="City" onclick="openLightbox(1)">
+    <img src="https://source.unsplash.com/random/402x300?nature" data-category="nature" alt="Nature" onclick="openLightbox(2)">
+    <img src="https://source.unsplash.com/random/403x300?city" data-category="city" alt="City" onclick="openLightbox(3)">
+    <img src="https://source.unsplash.com/random/404x300?nature" data-category="nature" alt="Nature" onclick="openLightbox(4)">
+    <img src="https://source.unsplash.com/random/405x300?city" data-category="city" alt="City" onclick="openLightbox(5)">
+  </div>
+
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+    <div class="nav">
+      <button onclick="changeImage(-1)">&#10094;</button>
+      <button onclick="changeImage(1)">&#10095;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
